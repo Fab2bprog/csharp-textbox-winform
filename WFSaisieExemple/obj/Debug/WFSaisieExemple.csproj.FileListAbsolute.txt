@@ -1,0 +1,10 @@
+C:\Users\fabga\source\repos\WFSaisieExemple\WFSaisieExemple\bin\Debug\WFSaisieExemple.exe.config
+C:\Users\fabga\source\repos\WFSaisieExemple\WFSaisieExemple\bin\Debug\WFSaisieExemple.exe
+C:\Users\fabga\source\repos\WFSaisieExemple\WFSaisieExemple\bin\Debug\WFSaisieExemple.pdb
+C:\Users\fabga\source\repos\WFSaisieExemple\WFSaisieExemple\obj\Debug\WFSaisieExemple.csprojAssemblyReference.cache
+C:\Users\fabga\source\repos\WFSaisieExemple\WFSaisieExemple\obj\Debug\WFSaisieExemple.Win_Exemple.resources
+C:\Users\fabga\source\repos\WFSaisieExemple\WFSaisieExemple\obj\Debug\WFSaisieExemple.Properties.Resources.resources
+C:\Users\fabga\source\repos\WFSaisieExemple\WFSaisieExemple\obj\Debug\WFSaisieExemple.csproj.GenerateResource.cache
+C:\Users\fabga\source\repos\WFSaisieExemple\WFSaisieExemple\obj\Debug\WFSaisieExemple.csproj.CoreCompileInputs.cache
+C:\Users\fabga\source\repos\WFSaisieExemple\WFSaisieExemple\obj\Debug\WFSaisieExemple.exe
+C:\Users\fabga\source\repos\WFSaisieExemple\WFSaisieExemple\obj\Debug\WFSaisieExemple.pdb
