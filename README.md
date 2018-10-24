@@ -1,25 +1,17 @@
 "# csharp_textbox_winform" 
 
-
-----------------------------
-Francais
-----------------------------
-Controle de Saisie de valeurs dans des champs de type textbox en c sharp 
-Toutes les saisies sont faites naturellement avec des tests de cohérence et corrections automatiques .
-Vous pourrez définir des valeurs maximum et minimum pour certains champs numériques. 
-Pour ce qui est de la saisie du champ décimal des textbox vous pourrez définir dans le code source le nombre de décimales voulu. 
+Controle de Saisie de valeurs dans des champs de type textbox en c sharp. Toutes les saisies sont faites naturellement avec des tests de cohÃ©rence et corrections automatiques. Vous pourrez dÃ©finir des valeurs maximum et minimum pour certains champs numÃ©riques. 
+Pour ce qui est de la saisie du champ dÃ©cimal des textbox vous pourrez dÃ©finir dans le code source le nombre de dÃ©cimales voulu. 
 -Saisie de code / Reference 
 -Saisie de nombres entiers et de nombres hexa. 
 -Saisie de nombres decimaux et monetaires . 
--Saisie de dates et d'heure (rapide : c'est a dire sans la souris avec des test de cohérence et correction auto). 
-Par exemple pour ce qui est du champs date les fins de mois 30, 31 sont gérés, les années bissextiles aussi pour le mois de fevrier. 
+-Saisie de dates et d'heure (rapide : c'est a dire sans la souris avec des test de cohÃ©rence et correction auto). 
+Par exemple pour ce qui est du champs date les fins de mois 30, 31 sont gÃ©rÃ©s, les annÃ©es bissextiles aussi pour le mois de fevrier. 
 -Saisie d'email. 
-
-Developpé en C Sharp sous Visual Studio 2017.
 
 -------------------------------
 English
--------------------------------
+
 Value input Control in TextBox type fields in C sharp all seizures are made naturally with automatic consistency tests and corrections.
 You can set maximum and minimum values for some numeric fields. 
 In terms of entering the decimal field of the TextBox you will be able to define in the source code the desired number of decimal places. 
