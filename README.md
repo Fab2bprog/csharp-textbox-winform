@@ -1,6 +1,6 @@
 "# csharp_textbox_winform" 
 
-Controle de Saisie de valeurs dans des champs de type textbox en c sharp. Toutes les saisies sont faites naturellement avec des tests de cohérence et corrections automatiques. Vous pourrez définir des valeurs maximum et minimum pour certains champs numériques. 
+Controle de saisie de valeurs dans des champs de type textbox en c sharp. Toutes les saisies sont faites naturellement avec des tests de cohérence et des corrections automatiques. Vous pourrez définir des valeurs maximums et minimums pour certains champs numériques. 
 Pour ce qui est de la saisie du champ décimal des textbox vous pourrez définir dans le code source le nombre de décimales voulu. 
 -Saisie de code / Reference 
 -Saisie de nombres entiers et de nombres hexa. 
