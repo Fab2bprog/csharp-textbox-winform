@@ -10,20 +10,18 @@ using System.Windows;
 using System.Windows.Forms;
 using System.ComponentModel;
 
-// Auteur : Fabrice GARCIA ( 20290 BORGO, Haute-Corse. le  14 octobre 2018)
+// Version 1.2
+// Auteur : Fabrice GARCIA ( 20290 BORGO, Haute-Corse)
 // Vous etes libre d'inclure ce code dans vos programmes.
 // Il vous est fournis librement et gratuitement sans aucune responsabilité de ma part.
 // Je vous demande seulement de respecter mon droit d'auteur en concervant mon nom
-// Vous pouvez aussi m'envoyer un mail de remerciement à fab2bprog@outlook.fr  ca me fera plaisir.
-
-//
 
 namespace WFSaisieExemple
 {
 
     public class ChampAlphaNum
     {
-        // Auteur : Fabrice GARCIA ( 20290 BORGO, Haute-Corse. le  14 octobre 2018)
+        // Auteur : Fabrice GARCIA ( 20290 BORGO, Haute-Corse)
 
         public TextBox ScanCible;
         public KeyPressEventArgs eKeyPressEvArg;
@@ -80,7 +78,7 @@ namespace WFSaisieExemple
     public class ChampHexa
 
     {
-        // Auteur : Fabrice GARCIA ( 20290 BORGO, Haute-Corse. le  14 octobre 2018)
+        // Auteur : Fabrice GARCIA ( 20290 BORGO, Haute-Corse)
 
         public TextBox ScanCible;
         public KeyPressEventArgs eKeyPressEvArg;
@@ -159,7 +157,7 @@ namespace WFSaisieExemple
 
     {
 
-        // Auteur : Fabrice GARCIA ( 20290 BORGO, Haute-Corse. le  14 octobre 2018)
+        // Auteur : Fabrice GARCIA ( 20290 BORGO, Haute-Corse.)
 
         public TextBox ScanCible;
         public KeyPressEventArgs eKeyPressEvArg;
@@ -280,7 +278,7 @@ namespace WFSaisieExemple
     public class ChampEMail
     {
 
-        // Auteur : Fabrice GARCIA ( 20290 BORGO, Haute-Corse. le  14 octobre 2018)
+        // Auteur : Fabrice GARCIA ( 20290 BORGO, Haute-Corse.)
 
         public TextBox ScanCible;
         string pattern = "^([0-9a-zA-Z]([-\\.\\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\\w]*[0-9a-zA-Z]\\.)+[a-zA-Z]{2,9})$";
@@ -298,7 +296,7 @@ namespace WFSaisieExemple
     }
     public class ChampDecimal
     {
-        // Auteur : Fabrice GARCIA ( 20290 BORGO, Haute-Corse. le  14 octobre 2018)
+        // Auteur : Fabrice GARCIA ( 20290 BORGO, Haute-Corse.)
 
         public TextBox ScanCible;
         public KeyPressEventArgs eKeyPressEvArg;
@@ -469,7 +467,7 @@ namespace WFSaisieExemple
     }
     public class ChampMonetaire
     {
-        // Auteur : Fabrice GARCIA ( 20290 BORGO, Haute-Corse. le  14 octobre 2018)
+        // Auteur : Fabrice GARCIA ( 20290 BORGO, Haute-Corse.)
 
         public TextBox ScanCible;
         public KeyPressEventArgs eKeyPressEvArg;
@@ -617,9 +615,9 @@ namespace WFSaisieExemple
 
     {
 
-        // Auteur : Fabrice GARCIA ( 20290 BORGO, Haute-Corse. le  14 octobre 2018)
+        // Auteur : Fabrice GARCIA ( 20290 BORGO, Haute-Corse.)
 
-        public TextBox ScanCible;
+        public MaskedTextBox ScanCible;
         public KeyPressEventArgs eKeyPressEvArg;
         public CancelEventArgs eCancelEvArgs;
 
@@ -674,7 +672,75 @@ namespace WFSaisieExemple
                         (dateSep.IndexOf(eKeyPressEvArg.KeyChar) > -1) ||
                         Char.IsControl(eKeyPressEvArg.KeyChar));
 
-            return true;
+            //Int32 PosSeparateur   = ScanCible.Text.IndexOf(dateSep);
+            //Int32 CountSepatateur = NbrChar(ScanCible.Text, '/');
+            //Int32 PosCurseur = ScanCible.SelectionStart;
+
+            //---aaaaaa
+
+
+            //if (char.IsDigit(eKeyPressEvArg.KeyChar))
+            //{
+    
+            //    if (PosCurseur == 2 && PosSeparateur==-1)
+            //    {
+            //        ScanCible.Text = ScanCible.Text+ dateSep;
+            //        ScanCible.SelectionStart = ScanCible.Text.Length;
+            //        return true;
+            //    }
+
+            //    if (PosCurseur == 5 && PosSeparateur == 2)
+            //    {
+            //       if ( CountSepatateur==1)
+            //        {
+            //            ScanCible.Text = ScanCible.Text + dateSep;
+            //            ScanCible.SelectionStart = ScanCible.Text.Length;
+            //            return true;
+            //        }
+                                                                       
+
+            //    }
+
+            //    return true;
+
+            //}
+
+      
+
+            //if (eKeyPressEvArg.KeyChar == '.' || eKeyPressEvArg.KeyChar == ',')
+            //{
+            //    eKeyPressEvArg.KeyChar = Separateur;
+
+            //    if (PosSeparateur == -1 && ScanCible.Text.Length > 0 && PosCurseur > 0) { return true; }
+            //    if (ScanCible.Text.Length == 0 || ScanCible.SelectionLength == ScanCible.Text.Length)
+            //    {
+            //        ScanCible.Text = "0" + Separateur;
+            //        ScanCible.SelectionStart = 2;
+            //        eKeyPressEvArg.Handled = true;
+            //        return false;
+            //    }
+
+            //    if (PosSeparateur == -1 && ScanCible.Text.Length > 0 && PosCurseur == 0)
+            //    {
+            //        ScanCible.Text = "0" + Separateur + ScanCible.Text;
+            //        ScanCible.SelectionStart = 2;
+            //        eKeyPressEvArg.Handled = true;
+            //        return false;
+            //    }
+
+            //    if (ScanCible.SelectedText.Contains(Separateur))
+            //    {
+            //        ScanCible.SelectedText = Separateur.ToString();
+            //        eKeyPressEvArg.Handled = true;
+            //        return false;
+            //    }
+
+
+                //---aaaaaa
+
+
+
+                return true;
 
         }
 
@@ -741,15 +807,15 @@ namespace WFSaisieExemple
 
             if (!m.Success) { return false; }
 
-            int jj = int.Parse(m.Groups[1].Value);
+            int dd = int.Parse(m.Groups[1].Value);
             int mm = int.Parse(m.Groups[2].Value);
-            int aaaa = int.Parse(m.Groups[3].Value);
+            int yyyy = int.Parse(m.Groups[3].Value);
 
-            if (aaaa <= 0) { return false; }
+            if (yyyy <= 0) { return false; }
             if (mm < 1 || mm > 12) { return false; }
 
-            if (jj < 1) { return false; }
-            if (jj > DateTime.DaysInMonth(aaaa, mm)) { return false; }
+            if (dd < 1) { return false; }
+            if (dd > DateTime.DaysInMonth(yyyy, mm)) { return false; }
 
             return true;
 
@@ -766,15 +832,15 @@ namespace WFSaisieExemple
                 return false;
             }
 
-            int jj = int.Parse(m.Groups[1].Value);
+            int dd = int.Parse(m.Groups[1].Value);
             int mm = int.Parse(m.Groups[2].Value);
-            int aaaa = int.Parse(m.Groups[3].Value);
+            int yyyy = int.Parse(m.Groups[3].Value);
 
-            if (aaaa <= 0) { aaaa = 2000; }
-            if (aaaa < 100) { aaaa = 2000 + aaaa; }
-            if (aaaa < 1900) { aaaa = 1900; }
+            if (yyyy <= 0) { yyyy = 2000; }
+            if (yyyy < 100) { yyyy = 2000 + yyyy; }
+            if (yyyy < 1900) { yyyy = 1900; }
 
-            if (DateTime.TryParse(jj + "/" + mm + "/" + aaaa, out DateTime DateMiseEnForme))
+            if (DateTime.TryParse(dd + "/" + mm + "/" + yyyy, out DateTime DateMiseEnForme))
             {
                 ScanCible.Text = DateMiseEnForme.ToString("dd/MM/yyyy");
             }
@@ -806,26 +872,26 @@ namespace WFSaisieExemple
                 }
             }
 
-            int jj = int.Parse(m.Groups[1].Value);
+            int dd = int.Parse(m.Groups[1].Value);
             int mm = int.Parse(m.Groups[2].Value);
-            int aaaa = int.Parse(m.Groups[3].Value);
+            int yyyy = int.Parse(m.Groups[3].Value);
 
-            if (aaaa <= 0) { aaaa = 2000; }
-            if (aaaa < 100) { aaaa = 2000 + aaaa; }
-            if (aaaa < 1900) { aaaa = 1900; }
+            if (yyyy <= 0) { yyyy = 2000; }
+            if (yyyy < 100) { yyyy = 2000 + yyyy; }
+            if (yyyy < 1900) { yyyy = 1900; }
 
             if (mm < 1) { mm = 1; }
             if (mm > 12) { mm = 12; }
 
-            if (jj < 1) { jj = 1; }
-            if (jj > DateTime.DaysInMonth(aaaa, mm))
+            if (dd < 1) { dd = 1; }
+            if (dd > DateTime.DaysInMonth(yyyy, mm))
             {
-                jj = DateTime.DaysInMonth(aaaa, mm);
+                dd = DateTime.DaysInMonth(yyyy, mm);
             };
 
 
 
-            if (DateTime.TryParse(jj + "/" + mm + "/" + aaaa, out DateTime DateCorrecte))
+            if (DateTime.TryParse(dd + "/" + mm + "/" + yyyy, out DateTime DateCorrecte))
             {
                 ScanCible.Text = DateCorrecte.ToString("dd/MM/yyyy");
             }
@@ -875,6 +941,16 @@ namespace WFSaisieExemple
             return true;
         }
 
+        int NbrChar(string chaine, char lettre)
+        {
+            int nb = 0;
+            foreach (char c in chaine)
+            {
+                if (c == lettre) nb++;
+            }
+            return nb;
+        }
+
 
 
         private bool Aff_Erreur(string contenu = "Date Invalide")
@@ -894,9 +970,9 @@ namespace WFSaisieExemple
 
     {
 
-        // Auteur : Fabrice GARCIA ( 20290 BORGO, Haute-Corse. le  14 octobre 2018)
+        // Auteur : Fabrice GARCIA ( 20290 BORGO, Haute-Corse.)
 
-        public TextBox ScanCible;
+        public MaskedTextBox ScanCible;
         public KeyPressEventArgs eKeyPressEvArg;
 
         char[] CaractAutorise = new char[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', ':' };
@@ -973,40 +1049,7 @@ namespace WFSaisieExemple
 
         }
 
-        public bool Valide_TextChanged()
-        {
-
-            int nbsigne = 0;
-
-            char[] CaractAutorise = new char[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', ':' };
-            ScanCible.Text = ScanCible.Text.Trim();
-
-            if (ScanCible.Text.Length == 0) return true;
-
-            //if (ScanCible.Text.LastIndexOf(':') > 1)
-            //{
-            //    ScanCible.Text = string.Empty;
-            //    return false;
-            //}
-
-            foreach (char character in (ScanCible.Text.ToArray()))
-            {
-                if (character == ':') { nbsigne++; }
-
-                if (!CaractAutorise.Contains(character) || nbsigne > 1)
-                {
-                    ScanCible.Text = string.Empty;
-                    return false;
-                }
-
-            }
-
-
-            return true;
-
-        }
-
-        public bool Valide_Leave()
+        public bool Valide_Validating()
         {
 
 

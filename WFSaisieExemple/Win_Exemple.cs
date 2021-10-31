@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
-// Auteur : Fabrice GARCIA ( 20290 BORGO, Haute-Corse. le  14 octobre 2018)
-// Vous etes libre d'inclure ce code dans vos programmes.
-// Il vous est fournis librement et gratuitement sans aucune responsabilité de ma part.
-// Je vous demande seulement de respecter mon droit d'auteur en concervant mon nom
-// Vous pouvez aussi m'envoyer un mail de remerciement à fab2bprog@outlook.fr  ca me fera plaisir.
+// Author: Fabrice GARCIA (20290 BORGO, Haute-Corse, France. October 14, 2018)
+// You are free to include this code in your programs.
+// It is provided to you freely and free of charge without any liability on my part.
+// I only ask you to respect my copyright by keeping my name
+// You can also send me a thank you email to fab2bprog@outlook.fr that will make me happy.
 
 
 
@@ -26,8 +26,8 @@ namespace WFSaisieExemple
             InitializeComponent();
         }
 
-        //---[EVENEMENTS:Txt_Code]--------------------------------------------------------
-        //IMPORTANT :  Doit etre integré DEUX aux types d'evenements suivant pour etre correctement géré et etre a l'abris des comportement utilisateurs 
+        // --- [EVENTS: Txt_Code] ---------------------------------------- ----------------
+        // IMPORTANT: Must be integrated TWO in the following types of events to be correctly managed and to be safe from user behavior
         private void Txt_Code_KeyPress(object sender, KeyPressEventArgs e)
         {
             ChampAlphaNum monCode = new ChampAlphaNum();
@@ -43,8 +43,8 @@ namespace WFSaisieExemple
             monCode.Valide_TextChanged();
         }
 
-        //---[EVENEMENTS:Txt_CodeLower]--------------------------------------------------------
-        //IMPORTANT :  Doit etre integré aux DEUX types d'evenements suivant pour etre correctement géré et etre a l'abris des comportement utilisateurs 
+        // --- [EVENTS: Txt_CodeLower] ---------------------------------------- ----------------
+        // IMPORTANT: Must be integrated into the following TWO types of events to be properly managed and to be safe from user behavior
         private void Txt_CodeLower_KeyPress(object sender, KeyPressEventArgs e)
         {
             ChampAlphaNum monCode = new ChampAlphaNum();
@@ -62,8 +62,8 @@ namespace WFSaisieExemple
             monCode.Valide_TextChanged();
         }
 
-        //---[EVENEMENTS:Txt_Int]--------------------------------------------------------
-        //IMPORTANT :  Doit etre integré aux TROIS types d'evenements suivant pour etre correctement géré et etre a l'abris des comportement utilisateurs 
+        // --- [EVENTS: Txt_Int] ---------------------------------------- ----------------
+        // IMPORTANT: Must be included in the following THREE types of events to be properly managed and to be safe from user behavior
         private void Txt_Int_KeyPress(object sender, KeyPressEventArgs e)
         {
             ChampEntier monCode = new ChampEntier();
@@ -86,9 +86,9 @@ namespace WFSaisieExemple
             monCode.Valide_Leave();
         }
 
-        //---[EVENEMENTS:Txt_IntLimit]--------------------------------------------------------
-        // LIMITATION de la valeur avec blocage entre 0 et 100 dans l'exemple en utilisant la propriété de l'objet valmin et valmax.
-        //IMPORTANT :  Doit etre integré aux TROIS types d'evenements suivant pour etre correctement géré et etre a l'abris des comportement utilisateurs 
+        // --- [EVENTS: Txt_IntLimit] ---------------------------------------- ----------------
+        // LIMIT the value with blocking between 0 and 100 in the example using the object property valmin and valmax.
+        // IMPORTANT: Must be included in the following THREE types of events to be properly managed and to be safe from user behavior
         private void Txt_IntLimit_KeyPress(object sender, KeyPressEventArgs e)
         {
             ChampEntier monCode = new ChampEntier();
@@ -117,8 +117,8 @@ namespace WFSaisieExemple
             monCode.Valide_Leave();
         }
 
-        //---[EVENEMENTS:Txt_NumHexa]--------------------------------------------------------
-        //IMPORTANT :  Doit etre integré aux DEUX types d'evenements suivant pour etre correctement géré et etre a l'abris des comportement utilisateurs 
+        // --- [EVENTS: Txt_NumHexa] ---------------------------------------- ----------------
+        // IMPORTANT: Must be integrated into the following TWO types of events to be properly managed and to be safe from user behavior
         private void Txt_NumHexa_KeyPress(object sender, KeyPressEventArgs e)
         {
             ChampHexa monCode = new ChampHexa();
@@ -134,10 +134,10 @@ namespace WFSaisieExemple
             monCode.Valide_TextChanged();
         }
 
-        //---[EVENEMENTS:Txt_Decim]--------------------------------------------------------
-        //IMPORTANT :  Doit etre integré aux QUATRE types d'evenements suivant pour etre correctement géré et etre a l'abris des comportement utilisateurs 
-        // On peut limiter la valeur avec blocage entre X et Y en utilisant la propriété de l'objet valmin et valmax (voir exemple pour les nombre entier ).
-        // On peut limiter le nombre de decimal en utilisant la propriété NbrDecim (exemple moncode.NbrDecim = 3)
+        // --- [EVENTS: Txt_Decim] ---------------------------------------- ----------------
+        // IMPORTANT: Must be integrated into the following FOUR types of events to be properly managed and to be safe from user behavior
+        // We can limit the value with blocking between X and Y using the property of the object valmin and valmax (see example for integers).
+        // We can limit the number of decimal by using the NbrDecim property (example mycode.NbrDecim = 3)
 
         private void Txt_Decim_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -170,9 +170,9 @@ namespace WFSaisieExemple
             monCode.Valide_TextChanged();
         }
 
-        //---[EVENEMENTS:Txt_Monetaire]--------------------------------------------------------
-        //IMPORTANT :  Doit etre integré aux TROIS types d'evenements suivant pour etre correctement géré et etre a l'abris des comportement utilisateurs 
-        // On peut limiter la valeur avec blocage entre X et Y en utilisant la propriété de l'objet valmin et valmax (voir exemple pour les nombre entier ).
+        // --- [EVENTS: Txt_Monetaire] ---------------------------------------- ----------------
+        // IMPORTANT: Must be included in the following THREE types of events to be properly managed and to be safe from user behavior
+        // We can limit the value with blocking between X and Y using the property of the object valmin and valmax (see example for integers).
         private void Txt_Monetaire_Enter(object sender, EventArgs e)
         {
             ChampMonetaire monCode = new ChampMonetaire();
@@ -197,55 +197,53 @@ namespace WFSaisieExemple
 
         }
 
-        //---[EVENEMENTS:Txt_Date]--------------------------------------------------------
-        // Le code corrige automatiquement les dates erronnées
-        //IMPORTANT :  Doit etre integré aux DEUX types d'evenements suivant pour etre correctement géré et etre a l'abris des comportement utilisateurs 
-        // Pour info la propriete MaxLength de la textbox a été limité à 10 caracteres dans l'interface graphique , mais ce n'est pas une obligation
+        // --- [EVENTS: Txt_Date] ---------------------------------------- ----------------
+        // USE A MASKEDTEXTBOX AND NOT A TEXTBOX
+        // IMPORTANT: Must be integrated into the following TWO types of events to be properly managed and to be safe from user behavior
+        // For info the MaxLength property of the MaskedTextBox has been limited to 10 characters in the graphical interface, but it is not an obligation
+        // In your project don't forget to right click on your MaskedTextBox and choose the date format (short format)
+        private void Txt_Date_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ChampDate monCode = new ChampDate();
+            monCode.ScanCible = (MaskedTextBox)sender;
+            monCode.eKeyPressEvArg = (KeyPressEventArgs)e;
+            monCode.Valide_KeyPress();
+        }
+
         private void Txt_Date_Validating(object sender, CancelEventArgs e)
         {
             ChampDate monCode = new ChampDate();
-            monCode.ScanCible = (TextBox)sender;
+            monCode.ScanCible = (MaskedTextBox)sender;
             monCode.eCancelEvArgs = (CancelEventArgs)e;
             monCode.Valide_Validating();
 
         }
 
-        private void Txt_Date_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            ChampDate monCode = new ChampDate();
-            monCode.ScanCible = (TextBox)sender;
-            monCode.eKeyPressEvArg = (KeyPressEventArgs)e;
-            monCode.Valide_KeyPress();
-        }
-
-        //---[EVENEMENTS:Txt_Heure]-------------------------------------------------------------------
-        //IMPORTANT :  Doit etre integré aux TROIS types d'evenements suivant pour etre correctement géré et etre a l'abris des comportement utilisateurs 
-        // Pour info la propriete MaxLength de la textbox a été limité à 5 caracteres dans l'interface graphique , mais ce n'est pas une obligation.
-        private void Txt_Heure_TextChanged(object sender, EventArgs e)
-        {
-            ChampHeure monCode = new ChampHeure();
-            monCode.ScanCible = (TextBox)sender;
-            monCode.Valide_TextChanged();
-
-        }
+        // --- [EVENTS: Txt_Time] ---------------------------------------- ---------------------------
+        // USE A MASKEDTEXTBOX AND NOT A TEXTBOX
+        // IMPORTANT: Must be integrated into the following TWO types of events to be properly managed and to be safe from user behavior
+        // FYI the MaxLength property of the MaskedTextBox has been limited to 5 characters in the GUI, but it's not a requirement.
+        // In your project don't forget to right click on your MaskedTextBox and choose the Hour format
 
         private void Txt_Heure_KeyPress(object sender, KeyPressEventArgs e)
         {
             ChampHeure monCode = new ChampHeure();
-            monCode.ScanCible = (TextBox)sender;
+            monCode.ScanCible = (MaskedTextBox)sender;
             monCode.eKeyPressEvArg = (KeyPressEventArgs)e;
             monCode.Valide_KeyPress();
+            
         }
 
-        private void Txt_Heure_Leave(object sender, EventArgs e)
+        private void Txt_Heure_Validating(object sender, EventArgs e)
         {
             ChampHeure monCode = new ChampHeure();
-            monCode.ScanCible = (TextBox)sender;
-            monCode.Valide_Leave();
+            monCode.ScanCible = (MaskedTextBox)sender;
+            monCode.Valide_Validating();
+         
         }
 
-        //---[EVENEMENTS:Txt_Email]--------------------------------------------------------
-        // IMPORTANT : Doit etre integré a ce type d'evenements suivant pour etre correctement géré et etre a l'abris des comportement utilisateurs 
+        // --- [EVENTS: Txt_Email] ---------------------------------------- ----------------
+        // IMPORTANT: Must be integrated into this type of events following to be correctly managed and to be safe from user behavior
 
         private void Txt_Email_LostFocus(object sender, EventArgs e)
         {
@@ -257,17 +255,21 @@ namespace WFSaisieExemple
             monCode.ScanCible.Focus();
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void Win_Exemple_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void Txt_Date_TextChanged(object sender, EventArgs e)
+
+
+        private void Txt_Date_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void Txt_Heure_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
         }

@@ -42,6 +42,7 @@
             this.Lab_Int = new System.Windows.Forms.Label();
             this.Txt_Int = new System.Windows.Forms.TextBox();
             this.Tab_Decim = new System.Windows.Forms.TabPage();
+            this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,10 +50,12 @@
             this.Lab_Decim = new System.Windows.Forms.Label();
             this.Txt_Decim = new System.Windows.Forms.TextBox();
             this.Tab_Time = new System.Windows.Forms.TabPage();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.Txt_Heure = new System.Windows.Forms.MaskedTextBox();
+            this.Txt_Date = new System.Windows.Forms.MaskedTextBox();
             this.Lab_Date = new System.Windows.Forms.Label();
-            this.Txt_Date = new System.Windows.Forms.TextBox();
             this.Lab_Heure = new System.Windows.Forms.Label();
-            this.Txt_Heure = new System.Windows.Forms.TextBox();
             this.Tab_Email = new System.Windows.Forms.TabPage();
             this.Lab_EMail = new System.Windows.Forms.Label();
             this.Txt_Email = new System.Windows.Forms.TextBox();
@@ -92,7 +95,7 @@
             this.Tab_Codes.Padding = new System.Windows.Forms.Padding(3);
             this.Tab_Codes.Size = new System.Drawing.Size(563, 326);
             this.Tab_Codes.TabIndex = 0;
-            this.Tab_Codes.Text = "Saisie de codes";
+            this.Tab_Codes.Text = "Entering codes";
             this.Tab_Codes.UseVisualStyleBackColor = true;
             // 
             // Lab_CodeLower
@@ -100,13 +103,13 @@
             this.Lab_CodeLower.AutoSize = true;
             this.Lab_CodeLower.Location = new System.Drawing.Point(25, 69);
             this.Lab_CodeLower.Name = "Lab_CodeLower";
-            this.Lab_CodeLower.Size = new System.Drawing.Size(254, 13);
+            this.Lab_CodeLower.Size = new System.Drawing.Size(268, 13);
             this.Lab_CodeLower.TabIndex = 21;
-            this.Lab_CodeLower.Text = "Code AlphaNum Minuscule sans Esp ni ponctuation ";
+            this.Lab_CodeLower.Text = "Code AlphaNum Lowercase without Esp or punctuation";
             // 
             // Txt_CodeLower
             // 
-            this.Txt_CodeLower.Location = new System.Drawing.Point(285, 69);
+            this.Txt_CodeLower.Location = new System.Drawing.Point(310, 69);
             this.Txt_CodeLower.Name = "Txt_CodeLower";
             this.Txt_CodeLower.Size = new System.Drawing.Size(169, 20);
             this.Txt_CodeLower.TabIndex = 20;
@@ -118,13 +121,13 @@
             this.Lab_Code.AutoSize = true;
             this.Lab_Code.Location = new System.Drawing.Point(25, 27);
             this.Lab_Code.Name = "Lab_Code";
-            this.Lab_Code.Size = new System.Drawing.Size(254, 13);
+            this.Lab_Code.Size = new System.Drawing.Size(268, 13);
             this.Lab_Code.TabIndex = 3;
-            this.Lab_Code.Text = "Code AlphaNum Majuscule sans Esp ni ponctuation ";
+            this.Lab_Code.Text = "AlphaNum Code Uppercase without Esp or punctuation";
             // 
             // Txt_Code
             // 
-            this.Txt_Code.Location = new System.Drawing.Point(285, 27);
+            this.Txt_Code.Location = new System.Drawing.Point(310, 27);
             this.Txt_Code.Name = "Txt_Code";
             this.Txt_Code.Size = new System.Drawing.Size(169, 20);
             this.Txt_Code.TabIndex = 2;
@@ -144,7 +147,7 @@
             this.Tab_Integer.Padding = new System.Windows.Forms.Padding(3);
             this.Tab_Integer.Size = new System.Drawing.Size(563, 326);
             this.Tab_Integer.TabIndex = 1;
-            this.Tab_Integer.Text = "Saisie Nombres Entiers";
+            this.Tab_Integer.Text = "Entering integer numbers.";
             this.Tab_Integer.UseVisualStyleBackColor = true;
             // 
             // label2
@@ -152,9 +155,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(25, 71);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(152, 13);
+            this.label2.Size = new System.Drawing.Size(138, 13);
             this.label2.TabIndex = 25;
-            this.label2.Text = "Nombre Entier entre 0 et 100  :";
+            this.label2.Text = "Integer between 0 and 100:";
             // 
             // textBox1
             // 
@@ -171,9 +174,9 @@
             this.Lab_NumHexa.AutoSize = true;
             this.Lab_NumHexa.Location = new System.Drawing.Point(28, 120);
             this.Lab_NumHexa.Name = "Lab_NumHexa";
-            this.Lab_NumHexa.Size = new System.Drawing.Size(108, 13);
+            this.Lab_NumHexa.Size = new System.Drawing.Size(106, 13);
             this.Lab_NumHexa.TabIndex = 23;
-            this.Lab_NumHexa.Text = "Numero Hexadecimal";
+            this.Lab_NumHexa.Text = "Hexadecimal number";
             // 
             // Txt_NumHexa
             // 
@@ -189,9 +192,9 @@
             this.Lab_Int.AutoSize = true;
             this.Lab_Int.Location = new System.Drawing.Point(24, 28);
             this.Lab_Int.Name = "Lab_Int";
-            this.Lab_Int.Size = new System.Drawing.Size(80, 13);
+            this.Lab_Int.Size = new System.Drawing.Size(84, 13);
             this.Lab_Int.TabIndex = 5;
-            this.Lab_Int.Text = "Nombre Entier :";
+            this.Lab_Int.Text = "Integer number :";
             // 
             // Txt_Int
             // 
@@ -205,6 +208,7 @@
             // 
             // Tab_Decim
             // 
+            this.Tab_Decim.Controls.Add(this.label8);
             this.Tab_Decim.Controls.Add(this.label5);
             this.Tab_Decim.Controls.Add(this.label4);
             this.Tab_Decim.Controls.Add(this.label1);
@@ -215,39 +219,49 @@
             this.Tab_Decim.Name = "Tab_Decim";
             this.Tab_Decim.Size = new System.Drawing.Size(563, 326);
             this.Tab_Decim.TabIndex = 2;
-            this.Tab_Decim.Text = "Saisie Nombres Decimaux";
+            this.Tab_Decim.Text = "Entering decimal numbers.";
             this.Tab_Decim.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(26, 15);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(414, 13);
+            this.label8.TabIndex = 30;
+            this.label8.Text = "The entry is checked in real time so that you can only enter decimal or integer n" +
+    "umbers";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(264, 33);
+            this.label5.Location = new System.Drawing.Point(264, 66);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(274, 13);
+            this.label5.Size = new System.Drawing.Size(260, 13);
             this.label5.TabIndex = 29;
-            this.label5.Text = "utilisez la proprieté nbrdecim  pour en fixer le nombre max";
+            this.label5.Text = "use the nbrdecim property to set the maximum number";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(264, 20);
+            this.label4.Location = new System.Drawing.Point(264, 53);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(182, 13);
+            this.label4.Size = new System.Drawing.Size(200, 13);
             this.label4.TabIndex = 28;
-            this.label4.Text = "Ici le nombre de decimal est limité a 5";
+            this.label4.Text = "Here the number of decimal is limited to 5";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(23, 130);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 13);
+            this.label1.Size = new System.Drawing.Size(89, 13);
             this.label1.TabIndex = 27;
-            this.label1.Text = "Monetaire";
+            this.label1.Text = "Monetary number";
             // 
             // Txt_Monetaire
             // 
-            this.Txt_Monetaire.Location = new System.Drawing.Point(148, 127);
+            this.Txt_Monetaire.Location = new System.Drawing.Point(158, 127);
             this.Txt_Monetaire.Name = "Txt_Monetaire";
             this.Txt_Monetaire.Size = new System.Drawing.Size(100, 20);
             this.Txt_Monetaire.TabIndex = 26;
@@ -258,15 +272,15 @@
             // Lab_Decim
             // 
             this.Lab_Decim.AutoSize = true;
-            this.Lab_Decim.Location = new System.Drawing.Point(20, 20);
+            this.Lab_Decim.Location = new System.Drawing.Point(23, 53);
             this.Lab_Decim.Name = "Lab_Decim";
-            this.Lab_Decim.Size = new System.Drawing.Size(85, 13);
+            this.Lab_Decim.Size = new System.Drawing.Size(83, 13);
             this.Lab_Decim.TabIndex = 25;
-            this.Lab_Decim.Text = "Nombre Decimal";
+            this.Lab_Decim.Text = "Decimal number";
             // 
             // Txt_Decim
             // 
-            this.Txt_Decim.Location = new System.Drawing.Point(148, 20);
+            this.Txt_Decim.Location = new System.Drawing.Point(158, 53);
             this.Txt_Decim.Name = "Txt_Decim";
             this.Txt_Decim.Size = new System.Drawing.Size(100, 20);
             this.Txt_Decim.TabIndex = 24;
@@ -277,57 +291,80 @@
             // 
             // Tab_Time
             // 
-            this.Tab_Time.Controls.Add(this.Lab_Date);
-            this.Tab_Time.Controls.Add(this.Txt_Date);
-            this.Tab_Time.Controls.Add(this.Lab_Heure);
+            this.Tab_Time.Controls.Add(this.label7);
+            this.Tab_Time.Controls.Add(this.label6);
             this.Tab_Time.Controls.Add(this.Txt_Heure);
+            this.Tab_Time.Controls.Add(this.Txt_Date);
+            this.Tab_Time.Controls.Add(this.Lab_Date);
+            this.Tab_Time.Controls.Add(this.Lab_Heure);
             this.Tab_Time.Location = new System.Drawing.Point(4, 22);
             this.Tab_Time.Name = "Tab_Time";
             this.Tab_Time.Padding = new System.Windows.Forms.Padding(3);
             this.Tab_Time.Size = new System.Drawing.Size(563, 326);
             this.Tab_Time.TabIndex = 3;
-            this.Tab_Time.Text = "Saisie Date et Heure";
+            this.Tab_Time.Text = "Enter Date and Time";
             this.Tab_Time.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(36, 128);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(477, 13);
+            this.label7.TabIndex = 26;
+            this.label7.Text = "The date is in French format you will have to modify the code to put it in the fo" +
+    "rmat of your language.";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(36, 21);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(247, 13);
+            this.label6.TabIndex = 25;
+            this.label6.Text = "Date and time entry controls use maskedtextboxes.";
+            // 
+            // Txt_Heure
+            // 
+            this.Txt_Heure.Location = new System.Drawing.Point(203, 53);
+            this.Txt_Heure.Mask = "00:00";
+            this.Txt_Heure.Name = "Txt_Heure";
+            this.Txt_Heure.Size = new System.Drawing.Size(40, 20);
+            this.Txt_Heure.TabIndex = 24;
+            this.Txt_Heure.ValidatingType = typeof(System.DateTime);
+            this.Txt_Heure.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.Txt_Heure_MaskInputRejected);
+            this.Txt_Heure.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Heure_KeyPress);
+            this.Txt_Heure.Validated += new System.EventHandler(this.Txt_Heure_Validating);
+            // 
+            // Txt_Date
+            // 
+            this.Txt_Date.Location = new System.Drawing.Point(203, 94);
+            this.Txt_Date.Mask = "00/00/0000";
+            this.Txt_Date.Name = "Txt_Date";
+            this.Txt_Date.Size = new System.Drawing.Size(70, 20);
+            this.Txt_Date.TabIndex = 23;
+            this.Txt_Date.ValidatingType = typeof(System.DateTime);
+            this.Txt_Date.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.Txt_Date_MaskInputRejected);
+            this.Txt_Date.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Date_KeyPress);
+            this.Txt_Date.Validating += new System.ComponentModel.CancelEventHandler(this.Txt_Date_Validating);
             // 
             // Lab_Date
             // 
             this.Lab_Date.AutoSize = true;
-            this.Lab_Date.Location = new System.Drawing.Point(36, 84);
+            this.Lab_Date.Location = new System.Drawing.Point(36, 97);
             this.Lab_Date.Name = "Lab_Date";
-            this.Lab_Date.Size = new System.Drawing.Size(143, 13);
+            this.Lab_Date.Size = new System.Drawing.Size(152, 13);
             this.Lab_Date.TabIndex = 15;
-            this.Lab_Date.Text = "Date Valide (JJ/MM/AAAA) :";
-            // 
-            // Txt_Date
-            // 
-            this.Txt_Date.Location = new System.Drawing.Point(185, 80);
-            this.Txt_Date.MaxLength = 10;
-            this.Txt_Date.Name = "Txt_Date";
-            this.Txt_Date.Size = new System.Drawing.Size(70, 20);
-            this.Txt_Date.TabIndex = 14;
-            this.Txt_Date.TextChanged += new System.EventHandler(this.Txt_Date_TextChanged);
-            this.Txt_Date.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Date_KeyPress);
-            this.Txt_Date.Validating += new System.ComponentModel.CancelEventHandler(this.Txt_Date_Validating);
+            this.Lab_Date.Text = "Valid Date ( DD/ MM / YYYY):";
             // 
             // Lab_Heure
             // 
             this.Lab_Heure.AutoSize = true;
-            this.Lab_Heure.Location = new System.Drawing.Point(36, 32);
+            this.Lab_Heure.Location = new System.Drawing.Point(36, 56);
             this.Lab_Heure.Name = "Lab_Heure";
-            this.Lab_Heure.Size = new System.Drawing.Size(120, 13);
+            this.Lab_Heure.Size = new System.Drawing.Size(108, 13);
             this.Lab_Heure.TabIndex = 13;
-            this.Lab_Heure.Text = "Heure Valide (HH:MM) :";
-            // 
-            // Txt_Heure
-            // 
-            this.Txt_Heure.Location = new System.Drawing.Point(185, 29);
-            this.Txt_Heure.MaxLength = 5;
-            this.Txt_Heure.Name = "Txt_Heure";
-            this.Txt_Heure.Size = new System.Drawing.Size(70, 20);
-            this.Txt_Heure.TabIndex = 12;
-            this.Txt_Heure.TextChanged += new System.EventHandler(this.Txt_Heure_TextChanged);
-            this.Txt_Heure.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Heure_KeyPress);
-            this.Txt_Heure.Leave += new System.EventHandler(this.Txt_Heure_Leave);
+            this.Lab_Heure.Text = "Valid Time (HH: MM):";
             // 
             // Tab_Email
             // 
@@ -337,7 +374,7 @@
             this.Tab_Email.Name = "Tab_Email";
             this.Tab_Email.Size = new System.Drawing.Size(563, 326);
             this.Tab_Email.TabIndex = 4;
-            this.Tab_Email.Text = "Saisie Email";
+            this.Tab_Email.Text = "Enter Email";
             this.Tab_Email.UseVisualStyleBackColor = true;
             // 
             // Lab_EMail
@@ -345,9 +382,9 @@
             this.Lab_EMail.AutoSize = true;
             this.Lab_EMail.Location = new System.Drawing.Point(24, 34);
             this.Lab_EMail.Name = "Lab_EMail";
-            this.Lab_EMail.Size = new System.Drawing.Size(105, 13);
+            this.Lab_EMail.Size = new System.Drawing.Size(102, 13);
             this.Lab_EMail.TabIndex = 9;
-            this.Lab_EMail.Text = "Adresse Mail Valide :";
+            this.Lab_EMail.Text = "Valid Email Address:";
             // 
             // Txt_Email
             // 
@@ -362,10 +399,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(366, 377);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(213, 13);
+            this.label3.Size = new System.Drawing.Size(207, 13);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Copyright Fabrice Garcia, Prog Version 1.00";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.label3.Text = "Copyright Fabrice Garcia, Prog Version 1.2";
             // 
             // Win_Exemple
             // 
@@ -375,7 +411,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Tab_Control);
             this.Name = "Win_Exemple";
-            this.Text = "Exemple de saisie de données dans des textbox";
+            this.Text = "Example of data entry control in textbox";
             this.Load += new System.EventHandler(this.Win_Exemple_Load);
             this.Tab_Control.ResumeLayout(false);
             this.Tab_Codes.ResumeLayout(false);
@@ -414,9 +450,7 @@
         private System.Windows.Forms.Label Lab_Decim;
         private System.Windows.Forms.TextBox Txt_Decim;
         private System.Windows.Forms.Label Lab_Date;
-        private System.Windows.Forms.TextBox Txt_Date;
         private System.Windows.Forms.Label Lab_Heure;
-        private System.Windows.Forms.TextBox Txt_Heure;
         private System.Windows.Forms.Label Lab_EMail;
         private System.Windows.Forms.TextBox Txt_Email;
         private System.Windows.Forms.Label label2;
@@ -424,6 +458,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.MaskedTextBox Txt_Date;
+        private System.Windows.Forms.MaskedTextBox Txt_Heure;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }
 
