@@ -3,9 +3,10 @@
 
 Easiest way to validate textbox. Very robust code that can satisfy the most demanding people.
 
-Value input Control in TextBox type fields in C sharp all seizures are made naturally with automatic consistency tests and corrections.
+Value input Control in TextBox type fields in C sharp . All validation are made naturally with automatic consistency tests and corrections. 
 You can set maximum and minimum values for some numeric fields. 
-In terms of entering the decimal field of the TextBox you will be able to define in the source code the desired number of decimal places. 
+In terms of entering the decimal field of the TextBox you will be able to define in the source code the desired number of decimal places.
+
 - Enter code/Reference.
 - Enter integers and hex numbers. 
 - Entering decimal and monetary numbers.
