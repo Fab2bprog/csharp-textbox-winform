@@ -6,7 +6,7 @@ Value input Control in TextBox type fields in C sharp all seizures are made natu
 You can set maximum and minimum values for some numeric fields. 
 In terms of entering the decimal field of the TextBox you will be able to define in the source code the desired number of decimal places. 
 - Enter code/Reference.
-- enter integers and hex numbers. 
+- Enter integers and hex numbers. 
 - Entering decimal and monetary numbers.
 - Entering dates (only french format for now dd/mm/yyyy, english later sorry) and time (fast: IE without the mouse with consistency test and auto correction). 
 For example with respect to the Date fields 30, 31 are managed, leap years also for the month of February. 
