@@ -1,6 +1,6 @@
 "# csharp_textbox_winform" 
 
-English :
+Validate TexBox.
 
 Value input Control in TextBox type fields in C sharp all seizures are made naturally with automatic consistency tests and corrections.
 You can set maximum and minimum values for some numeric fields. 
