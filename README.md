@@ -12,6 +12,11 @@ In terms of entering the decimal field of the TextBox you will be able to define
 For example with respect to the Date fields 30, 31 are managed, leap years also for the month of February. 
 - Email entry. 
 
+<p align="center">
+  <img src="https://github.com/Fab2bprog/csharp-textbox-winform/blob/master/screenshoot/screenshoot.PNG" width="650" title="Exemple chsarp screenshot 1">
+ </p>
+ 
+
 -------------------------------
 French :
 
